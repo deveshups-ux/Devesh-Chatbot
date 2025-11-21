@@ -5,7 +5,7 @@ import OrbitVisualization from "./OrbitVisualization";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen pt-32 pb-16 px-6">
+    <section id="home" className="min-h-screen pt-32 pb-16 px-6">
       <div className="container mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content - Text Block */}
