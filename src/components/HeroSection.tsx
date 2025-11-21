@@ -1,69 +1,49 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search, Send } from "lucide-react";
+import { Search } from "lucide-react";
 import OrbitVisualization from "./OrbitVisualization";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen pt-24 pb-12 px-6">
-      <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+    <section className="min-h-screen pt-32 pb-16 px-6">
+      <div className="container mx-auto max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left Content - Text Block */}
           <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                <span className="gradient-text">Devesh AI Persona</span>
-                <br />
-                <span className="text-foreground">Your Personal</span>
-                <br />
-                <span className="text-foreground">Intelligent Companion</span>
+            <div className="space-y-6">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-display leading-tight text-foreground">
+                Meet Devesh AI Persona
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-                Experience the future with a friendly, emotional, and smart AI assistant that understands you. 
-                Engage in natural conversations and unlock limitless possibilities.
+              <h2 className="text-2xl md:text-3xl font-semibold font-display gradient-text-soft">
+                Your Smart, Calm & Lovable AI Companion
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                Ask anything. Learn anything. Plan anything. Your personal AI that grows with you.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl">
-                Start Conversation
-              </Button>
-              <Button variant="glass" size="xl">
-                Learn More
-              </Button>
-            </div>
-
             {/* Search Bar */}
-            <div className="mt-8 space-y-4">
-              <div className="glass-strong rounded-2xl p-1 glow-soft">
-                <div className="flex items-center gap-2 p-3">
+            <div className="space-y-4">
+              <div className="glass-soft rounded-2xl p-2 shadow-lg glow-soft border border-pastel-lavender/30">
+                <div className="flex items-center gap-3 px-4 py-3">
                   <Search className="w-5 h-5 text-muted-foreground" />
                   <Input
-                    placeholder="Ask me anything..."
-                    className="border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-base"
+                    placeholder="Ask something…"
+                    className="border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-base placeholder:text-muted-foreground/60"
                   />
-                  <Button size="icon" variant="hero" className="rounded-xl">
-                    <Send className="w-4 h-4" />
-                  </Button>
                 </div>
               </div>
+            </div>
 
-              {/* Chat Bubbles Preview */}
-              <div className="flex gap-3 flex-wrap">
-                <div className="glass rounded-xl px-4 py-2 text-sm text-foreground hover:glass-strong transition-all cursor-pointer">
-                  💡 Explain quantum computing
-                </div>
-                <div className="glass rounded-xl px-4 py-2 text-sm text-foreground hover:glass-strong transition-all cursor-pointer">
-                  🎨 Create a story
-                </div>
-                <div className="glass rounded-xl px-4 py-2 text-sm text-foreground hover:glass-strong transition-all cursor-pointer">
-                  🚀 Plan my day
-                </div>
-              </div>
+            {/* CTA Button */}
+            <div className="flex gap-4 pt-2">
+              <Button variant="hero" size="xl" className="shadow-lg">
+                Start Chat
+              </Button>
             </div>
           </div>
 
-          {/* Right Orbit Visualization */}
+          {/* Right Side - Orbit Visualization */}
           <div className="hidden lg:flex items-center justify-center h-[600px]">
             <OrbitVisualization />
           </div>

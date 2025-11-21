@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -60,11 +61,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        neon: {
-          purple: "hsl(var(--neon-purple))",
-          blue: "hsl(var(--neon-blue))",
-          pink: "hsl(var(--neon-pink))",
-          cyan: "hsl(var(--neon-cyan))",
+        pastel: {
+          lavender: "hsl(var(--pastel-lavender))",
+          blue: "hsl(var(--pastel-blue))",
+          pink: "hsl(var(--pastel-pink))",
+          purple: "hsl(var(--pastel-purple))",
         },
       },
       borderRadius: {
