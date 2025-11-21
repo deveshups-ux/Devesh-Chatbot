@@ -1,65 +1,67 @@
-import { Brain, Sparkles, Zap, MessageSquare, Cpu, Star } from "lucide-react";
+import { Brain, Sparkles, Zap, MessageSquare, Lightbulb, Star } from "lucide-react";
 
 const OrbitVisualization = () => {
   return (
     <div className="relative w-full h-full flex items-center justify-center">
       {/* Center Core */}
       <div className="relative z-10">
-        <div className="glass-strong rounded-full p-8 glow-purple animate-pulse-glow">
-          <div className="flex flex-col items-center gap-2">
-            <Brain className="w-12 h-12 text-neon-purple" />
-            <span className="text-lg font-bold gradient-text">Devesh AI</span>
-            <span className="text-xs text-muted-foreground">Persona</span>
+        <div className="glass-soft rounded-full p-10 shadow-xl">
+          <div className="flex flex-col items-center gap-3">
+            <Brain className="w-14 h-14 text-pastel-lavender" />
+            <div className="text-center">
+              <div className="text-xl font-bold font-display gradient-text-soft">Devesh AI</div>
+              <div className="text-sm text-muted-foreground font-medium">Persona</div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Orbit Ring 1 */}
-      <div className="absolute w-64 h-64 rounded-full border-2 border-neon-purple/20 animate-rotate-slow">
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <div className="glass rounded-full p-3 glow-purple">
-            <Sparkles className="w-6 h-6 text-neon-purple" />
+      {/* Orbit Ring 1 - Inner */}
+      <div className="absolute w-72 h-72 rounded-full border-2 border-pastel-lavender/30 animate-rotate-gentle">
+        <div className="absolute -top-5 left-1/2 -translate-x-1/2">
+          <div className="glass-soft rounded-full p-4 shadow-lg glow-hover">
+            <Sparkles className="w-6 h-6 text-pastel-lavender" />
           </div>
         </div>
-        <div className="absolute top-1/2 -right-4 -translate-y-1/2">
-          <div className="glass rounded-full p-3 glow-blue">
-            <Zap className="w-6 h-6 text-neon-blue" />
-          </div>
-        </div>
-      </div>
-
-      {/* Orbit Ring 2 */}
-      <div className="absolute w-80 h-80 rounded-full border-2 border-neon-blue/20" style={{ animation: "rotateSlow 25s linear infinite reverse" }}>
-        <div className="absolute top-1/2 -left-4 -translate-y-1/2">
-          <div className="glass rounded-full p-3 glow-pink">
-            <MessageSquare className="w-6 h-6 text-neon-pink" />
-          </div>
-        </div>
-        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2">
-          <div className="glass rounded-full p-3 glow-blue">
-            <Cpu className="w-6 h-6 text-neon-blue" />
+        <div className="absolute top-1/2 -right-5 -translate-y-1/2">
+          <div className="glass-soft rounded-full p-4 shadow-lg glow-hover">
+            <Zap className="w-6 h-6 text-pastel-blue" />
           </div>
         </div>
       </div>
 
-      {/* Orbit Ring 3 */}
-      <div className="absolute w-96 h-96 rounded-full border-2 border-neon-pink/20 animate-rotate-slow">
-        <div className="absolute top-8 right-8">
-          <div className="glass rounded-full p-3 glow-purple animate-float">
-            <Star className="w-6 h-6 text-neon-purple" />
+      {/* Orbit Ring 2 - Middle */}
+      <div className="absolute w-96 h-96 rounded-full border-2 border-pastel-blue/30" style={{ animation: "rotateGentle 35s linear infinite reverse" }}>
+        <div className="absolute top-1/2 -left-5 -translate-y-1/2">
+          <div className="glass-soft rounded-full p-4 shadow-lg glow-hover">
+            <MessageSquare className="w-6 h-6 text-pastel-pink" />
           </div>
         </div>
-        <div className="absolute bottom-8 left-8">
-          <div className="glass rounded-full p-3 glow-pink animate-float" style={{ animationDelay: "1s" }}>
-            <Star className="w-6 h-6 text-neon-pink" />
+        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2">
+          <div className="glass-soft rounded-full p-4 shadow-lg glow-hover">
+            <Lightbulb className="w-6 h-6 text-pastel-blue" />
+          </div>
+        </div>
+      </div>
+
+      {/* Orbit Ring 3 - Outer */}
+      <div className="absolute w-[28rem] h-[28rem] rounded-full border-2 border-pastel-pink/20 animate-rotate-gentle">
+        <div className="absolute top-12 right-12">
+          <div className="glass-soft rounded-full p-3 shadow-lg animate-float-gentle">
+            <Star className="w-5 h-5 text-pastel-lavender" />
+          </div>
+        </div>
+        <div className="absolute bottom-12 left-12">
+          <div className="glass-soft rounded-full p-3 shadow-lg animate-float-gentle" style={{ animationDelay: "2s" }}>
+            <Star className="w-5 h-5 text-pastel-pink" />
           </div>
         </div>
       </div>
 
       {/* Floating Particles */}
-      <div className="absolute w-2 h-2 bg-neon-purple/50 rounded-full top-1/4 left-1/4 animate-float" style={{ animationDelay: "0.5s" }} />
-      <div className="absolute w-2 h-2 bg-neon-blue/50 rounded-full top-3/4 right-1/4 animate-float" style={{ animationDelay: "1.5s" }} />
-      <div className="absolute w-2 h-2 bg-neon-pink/50 rounded-full bottom-1/4 right-1/3 animate-float" style={{ animationDelay: "2s" }} />
+      <div className="absolute w-2 h-2 bg-pastel-lavender/40 rounded-full top-1/4 left-1/4 animate-float-gentle" style={{ animationDelay: "1s" }} />
+      <div className="absolute w-2 h-2 bg-pastel-blue/40 rounded-full top-3/4 right-1/4 animate-float-gentle" style={{ animationDelay: "3s" }} />
+      <div className="absolute w-2 h-2 bg-pastel-pink/40 rounded-full bottom-1/4 right-1/3 animate-float-gentle" style={{ animationDelay: "4s" }} />
     </div>
   );
 };
